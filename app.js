@@ -15,7 +15,7 @@ const hpp = require('hpp');
 const viewsRouter = require('./routes/viewsRouter');
 const booking = require('./routes/bookingRouter');
 
-// doesnt work don t know why
+//start express app
 const app = express();
 
 app.set('view engine', 'pug');
