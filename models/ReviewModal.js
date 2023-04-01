@@ -78,7 +78,6 @@ ReviewSchema.post('save', function () {
 });
 ReviewSchema.pre(/^findOneAnd/, async function (next) {
   this.review = await this.findOne();
-  console.log(this.review);
   next();
 });
 ReviewSchema.post(/^findOneAnd/, async function () {

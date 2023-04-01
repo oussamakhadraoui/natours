@@ -14,6 +14,7 @@ const sanitize = require('express-mongo-sanitize');
 const hpp = require('hpp');
 const viewsRouter = require('./routes/viewsRouter');
 const booking = require('./routes/bookingRouter');
+const compression = require('compression');
 
 //start express app
 const app = express();
@@ -70,17 +71,15 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 //routes
 app.use((req, res, next) => {
   console.log(req.cookies);
   next();
 });
 //////////////////
-// app.use((req, res, next) => {
-//   res.removeHeader('Cross-Origin-Resource-Policy');
-//   res.removeHeader('Cross-Origin-Embedder-Policy');
-//   next();
-// });
+
 //////////////////////
 app.use('/', viewsRouter);
 app.use('/v1', limiter);
