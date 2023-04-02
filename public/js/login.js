@@ -25,7 +25,6 @@ export const logout = async () => {
   try {
     const res = await axios({
       method: 'GET',
-
       url: '/v1/user/logout',
     });
     if (res.data.status === 'success') {
