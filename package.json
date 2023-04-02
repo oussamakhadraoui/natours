@@ -4,7 +4,8 @@
   "description": "learning express mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "SET NODE_ENV=development & nodemon server.js",
+    "start": "node server.js",
+    "dev": "SET NODE_ENV=development & nodemon server.js",
     "start:prod": "SET NODE_ENV=production & nodemon server.js",
     "debug": "ndb server.js",
     "web": "webpack"
@@ -55,6 +56,9 @@
     "prettier": "^2.8.4",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   },
   "keywords": []
 }
